@@ -1,0 +1,45 @@
+###for saving clock-in form
+POST http://localhost:8081/api/save
+Content-Type: application/json
+
+{
+  "date": "2024-09-14",
+  "shiftNumber": "A2",
+  "manager": "Manager 2",
+  "time": "10:00:00",
+  "issues": "No issues",
+  "remarks": "All good",
+  "oxygen": 20.8,
+  "methane": 0.1,
+  "monoxide": 0,
+  "ventilation": 3.5,
+  "integrity": 100,
+  "selectedEmployees": ["John Doe", "Jane Smith"],
+  "logType": "clock_in"
+}
+
+###for saving clock-out form
+POST http://localhost:8081/api/save
+Content-Type: application/json
+
+{
+  "date": "2024-09-14",
+  "shiftNumber": "A1",
+  "manager": "Manager 1",
+  "time": "16:00:00",
+  "issues": "No issues",
+  "remarks": "All good",
+  "oxygen": 20.8,
+  "methane": 0.1,
+  "monoxide": 0,
+  "ventilation": 3.5,
+  "integrity": 100,
+  "selectedEmployees": ["John Doe", "Jane Smith"],
+  "logType": "clock_out"
+}
+
+###for getting minimal data
+GET http://localhost:8081/api/preview
+
+###for printing the pdf
+GET http://localhost:8081/api/print/A1
